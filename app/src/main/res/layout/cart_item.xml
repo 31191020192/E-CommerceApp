@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:weightSum="10">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_marginBottom="10dp"
+        android:layout_weight="2"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/btnDelItem"
+                android:layout_width="21dp"
+                android:layout_height="20dp"
+                android:layout_weight="1"
+                android:backgroundTint="#FDFDFD"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="@+id/imgItemCart"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@drawable/ic_baseline_delete_24" />
+
+            <ImageView
+                android:id="@+id/imgItemCart"
+                android:layout_width="54dp"
+                android:layout_height="74dp"
+                android:layout_margin="5dp"
+                android:adjustViewBounds="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"></ImageView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_marginBottom="10dp"
+        android:layout_weight="4"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtCartItemName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/crimson_pro"
+            android:text="Tên sản phẩm"
+            android:textColor="#000000"
+            android:textSize="20dp"></TextView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_marginBottom="10dp"
+        android:layout_weight="4"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtCartItemPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/crimson_pro_bold"
+            android:gravity="right"
+            android:text="Giá"
+            android:textColor="#000000"
+            android:textSize="20dp"></TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:fontFamily="@font/roboto_medium"
+                android:id="@+id/btnMinus"
+                android:layout_marginBottom="5dp"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#FFFFFF"
+                android:focusable="false"
+                android:text="-"
+                android:textColor="#000000"
+                android:textSize="24dp"></Button>
+
+            <EditText
+                android:id="@+id/editTxtQuantity"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1"
+                android:clickable="false"
+                android:ems="10"
+                android:gravity="center"
+                android:inputType="number"
+                android:text="1"
+                android:fontFamily="@font/roboto_medium"
+                android:textColor="#000000"
+                android:textSize="20dp" />
+
+            <Button
+                android:fontFamily="@font/roboto_medium"
+                android:id="@+id/btnPlus"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:backgroundTint="#FFFFFF"
+                android:focusable="false"
+                android:text="+"
+                android:textColor="#000000"
+                android:textSize="24dp"></Button>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

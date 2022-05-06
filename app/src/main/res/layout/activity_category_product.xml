@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Category.CategoryProduct"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarCatePro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:background="#00BCD4"
+        app:buttonGravity="center_vertical"
+        app:navigationIcon="@drawable/ic_baseline_arrow_back_24"
+        app:titleTextColor="#000000">
+
+        <ImageButton
+            android:id="@+id/btnViewCartCP"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:backgroundTint="#00BCD4"
+
+            app:srcCompat="@drawable/ic_baseline_shopping_cart_24"
+            app:tint="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/txtNameCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="Tên danh mục"
+            android:textColor="@color/white"
+            android:fontFamily="@font/crimson_pro_medium"></TextView>
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ProgressBar
+                android:id="@+id/progressBarCP"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"/>
+
+            <TextView
+                android:id="@+id/txtNotedProgressCP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/progressBarCP"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/crimson_pro"
+                android:text="Đang tải dữ liệu. Vui lòng đợi"
+                android:textSize="20dp" />
+
+            <ImageButton
+                android:id="@+id/imgCloseCS"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:backgroundTint="#FFFFFF"
+                app:srcCompat="@drawable/ic_baseline_arrow_back_ios_24" />
+
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/sv_cate_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/imgCloseCS"
+                android:queryHint="Tìm sản phẩm trong..." />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcv_searchInCate"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/sv_cate_search"
+                android:visibility="invisible"></androidx.recyclerview.widget.RecyclerView>
+
+            <GridView
+                android:id="@+id/gv_catePro"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/sv_cate_search"
+                android:layout_marginTop="5dp"
+                android:numColumns="2" />
+        </RelativeLayout>
+
+    </LinearLayout>
+</LinearLayout>

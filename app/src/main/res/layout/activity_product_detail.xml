@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarProDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:background="#00BCD4"
+        android:gravity="center"
+        app:buttonGravity="center_vertical"
+        app:navigationIcon="@drawable/ic_baseline_arrow_back_24"
+        app:titleTextColor="#000000">
+
+        <ImageButton
+            android:id="@+id/btnViewCartPD"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:backgroundTint="#00BCD4"
+
+            app:srcCompat="@drawable/ic_baseline_shopping_cart_24"
+            app:tint="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/ttsp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/crimson_pro_bold"
+            android:gravity="right"
+            android:text="Thông tin sản phẩm"
+            android:textColor="@color/white"
+            android:textSize="22dp"
+            android:layout_marginRight="50dp"></TextView>
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="15dp"
+        android:weightSum="12"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="4"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/proImg"
+                android:layout_width="230dp"
+                android:layout_height="210dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:weightSum="5"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/proNameTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/crimson_pro"
+                    android:text="TextView"
+                    android:textColor="#000000"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:id="@+id/rateTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/crimson_pro_medium"
+                    android:text="5.0"
+                    android:textColor="#FDBB3C"
+                    android:textSize="18sp"
+                    android:layout_below="@+id/proNameTxt"/>
+
+                <ImageView
+                    android:id="@+id/starImg"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    app:srcCompat="@drawable/ic_baseline_star_rate_24"
+                    android:layout_toRightOf="@+id/rateTxt"
+                    android:layout_below="@+id/proNameTxt"/>
+
+                <TextView
+                    android:id="@+id/priceTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rateTxt"
+                    android:layout_marginTop="5sp"
+                    android:fontFamily="@font/crimson_pro_bold"
+                    android:text="25.000"
+                    android:textColor="#C00000"
+                    android:textSize="22sp" />
+
+                <Button
+                    android:id="@+id/btnAddCart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="1dp"
+                    android:layout_marginBottom="43dp"
+                    android:backgroundTint="#FDBB3C"
+                    android:fontFamily="@font/crimson_pro"
+                    android:text="Thêm vào giỏ" />
+
+                <TextView
+                    android:id="@+id/description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/priceTxt"
+                    android:layout_marginTop="5sp"
+                    android:fontFamily="@font/crimson_pro_bold"
+                    android:text="Mô tả"
+                    android:textColor="#000000"
+                    android:textSize="20sp" />
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/description">
+
+                    <TextView
+                        android:id="@+id/descriptionTxt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/crimson_pro"
+                        android:text="TextView"
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
+                </ScrollView>
+
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="5"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_weight="2">
+
+                <Button
+                    android:id="@+id/btnDecrease"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#00BCD4"
+                    android:text="-"
+                    android:textSize="28sp"
+                    android:gravity="center" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/txtQuantity"
+                    android:layout_width="match_parent"
+                    android:layout_height="50sp"
+                    android:background="#FFF8F8"
+                    android:backgroundTint="#FDE6E6"
+                    android:fontFamily="@font/crimson_pro"
+                    android:gravity="center"
+                    android:text="1"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textSize="28sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_weight="2">
+
+                <Button
+                    android:id="@+id/btnIncrease"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#00BCD4"
+                    android:text="+"
+                    android:gravity="center"
+                    android:textSize="28sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="4"
+            android:weightSum="15"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/crimson_pro_medium"
+                    android:text="Sản phẩm tương tự"
+                    android:textColor="#050505"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="8"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/otherProImg1"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_gravity="left"/>
+
+                    <TextView
+                        android:id="@+id/nameOtherPro1"
+                        android:layout_width="match_parent"
+                        android:layout_height="42dp"
+                        android:fontFamily="@font/crimson_pro"
+                        android:text="TextView"
+                        android:textColor="#000000"
+                        android:textSize="18sp"/>
+
+                    <TextView
+                        android:layout_marginTop="5sp"
+                        android:id="@+id/priceOtherPro1"
+                        android:layout_width="114dp"
+                        android:layout_height="32dp"
+                        android:layout_marginBottom="4dp"
+                        android:fontFamily="@font/crimson_pro_medium"
+                        android:text="TextView"
+                        android:textColor="#000000"
+                        android:textSize="18sp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_marginLeft="12dp"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/otherProImg2"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp" />
+
+                    <TextView
+                        android:id="@+id/nameOtherPro2"
+                        android:layout_width="112dp"
+                        android:layout_height="42dp"
+                        android:fontFamily="@font/crimson_pro"
+                        android:text="TextView"
+                        android:textColor="#000000"
+                        android:textSize="18sp"/>
+
+                    <TextView
+                        android:layout_marginTop="5sp"
+                        android:id="@+id/priceOtherPro2"
+                        android:layout_width="114dp"
+                        android:layout_height="32dp"
+                        android:fontFamily="@font/crimson_pro_medium"
+                        android:text="TextView"
+                        android:textColor="#000000"
+                        android:textSize="18sp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:orientation="vertical"
+                    >
+
+                    <ImageButton
+                        android:id="@+id/otherProImg3"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp" />
+
+                    <TextView
+                        android:id="@+id/nameOtherPro3"
+                        android:layout_width="115dp"
+                        android:layout_height="41dp"
+                        android:fontFamily="@font/crimson_pro"
+                        android:text="TextView"
+                        android:textColor="#000000"
+                        android:textSize="18sp"/>
+
+                    <TextView
+                        android:layout_marginTop="5sp"
+                        android:id="@+id/priceOtherPro3"
+                        android:layout_width="116dp"
+                        android:layout_height="28dp"
+                        android:layout_marginStart="20dp"
+                        android:fontFamily="@font/crimson_pro_medium"
+                        android:text="TextView"
+                        android:textColor="#000000"
+                        android:textSize="18sp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_marginTop="10dp">
+
+
+    <ImageButton
+        android:id="@+id/imgPro"
+        android:layout_width="150dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:id="@+id/txtNamePro"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/crimson_pro"
+        android:gravity="center"
+        android:text="TextView"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/txtPricePro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/crimson_pro_bold"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:gravity="center"/>
+
+    <Button
+        android:id="@+id/btnAddPro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mua ngay"
+        android:backgroundTint="#FDBB3C"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/crimson_pro_bold"
+        android:textSize="18sp"
+        android:gravity="left"/>
+</LinearLayout>

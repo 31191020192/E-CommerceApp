@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".History.History">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarHistory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:nestedScrollingEnabled="false"
+        android:outlineProvider="none"
+        android:textAlignment="center"
+        app:buttonGravity="center_vertical"
+        android:background="#00BCD4"
+        app:navigationIcon="@drawable/ic_baseline_arrow_back_24"
+        app:titleTextColor="#000000">
+
+        <TextView
+            android:id="@+id/txt1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="50dp"
+            android:backgroundTint="#FFFFFF"
+            android:fadeScrollbars="false"
+            android:fontFamily="@font/crimson_pro_bold"
+            android:gravity="center"
+            android:text="Đơn hàng từng mua"
+            android:textColor="@color/white"
+            android:textSize="22dp"></TextView>
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="12"
+        android:layout_margin="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/txtInfoH"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/crimson_pro_medium"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"></TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:id="@+id/btnSignoutH"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="#8BC34A"
+                    android:drawableLeft="@drawable/ic_baseline_remove_circle_outline_24"
+                    android:fontFamily="@font/crimson_pro"
+                    android:gravity="center"
+                    android:text="Đăng xuất"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    tools:ignore="TouchTargetSizeCheck"></TextView>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Lịch sử mua hàng"
+                android:textSize="20dp"
+                android:fontFamily="@font/crimson_pro"
+                android:gravity="center"
+                android:textColor="@color/black"></TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="8">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ListView
+                    android:id="@+id/listItemPurchase"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginEnd="0dp"
+                    android:layout_marginBottom="-2dp"></ListView>
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true" />
+
+                <TextView
+                    android:id="@+id/txtNotedProgressHis"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/progressBar"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/crimson_pro"
+                    android:text="Đang tải dữ liệu. Vui lòng đợi"
+                    android:textSize="20dp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

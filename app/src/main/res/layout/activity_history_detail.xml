@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".History.HistoryDetail">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarHistoryDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="#00BCD4"
+        android:textAlignment="center"
+        app:buttonGravity="center_vertical"
+        app:navigationIcon="@drawable/ic_baseline_arrow_back_24"
+        app:titleTextColor="#000000">
+
+        <TextView
+            android:id="@+id/txt1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="50dp"
+            android:backgroundTint="#FFFFFF"
+            android:fadeScrollbars="false"
+            android:fontFamily="@font/crimson_pro_bold"
+            android:gravity="center"
+            android:nestedScrollingEnabled="false"
+            android:singleLine="false"
+            android:text="Đơn hàng từng mua"
+            android:textColor="@color/white"
+            android:textSize="22dp"></TextView>
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="12"
+        android:orientation="vertical"
+        android:layout_margin="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/txtInfoHD"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/crimson_pro_medium"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"></TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:layout_margin="10dp"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/btnSignoutHD"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="#8BC34A"
+                    android:drawableLeft="@drawable/ic_baseline_remove_circle_outline_24"
+                    android:fontFamily="@font/crimson_pro"
+                    android:gravity="center"
+                    android:text="Đăng xuất"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="18dp"
+                    tools:ignore="TouchTargetSizeCheck"></TextView>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:weightSum="5"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="3">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/crimson_pro"
+                    android:gravity="center"
+                    android:text="Lịch sử mua hàng"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"></TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="right|center">
+
+                <TextView
+                    android:id="@+id/orderIdHD"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:fontFamily="@font/crimson_pro"
+                    android:text="DH"
+                    android:textColor="@color/black"
+                    android:textSize="20dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="8">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ProgressBar
+                    android:id="@+id/progressBarHD"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"/>
+
+                <TextView
+                    android:id="@+id/txtNotedProgressHD"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/progressBarHD"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/crimson_pro"
+                    android:text="Đang tải dữ liệu. Vui lòng đợi"
+                    android:textSize="20dp" />
+
+                <ListView
+                    android:id="@+id/listItemDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginEnd="0dp"
+                    android:layout_marginBottom="-2dp"></ListView>
+
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>
